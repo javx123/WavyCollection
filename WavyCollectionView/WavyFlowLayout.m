@@ -25,10 +25,9 @@
     for (UICollectionViewLayoutAttributes *attribute in superAttrs) {
         CGFloat randomY = arc4random_uniform(self.collectionView.frame.size.height-26)+25;
         CGPoint randomCenter = CGPointMake(attribute.frame.origin.x+50, randomY);
-//        CGSize randomSize = CGSizeMake(100, randomY*0.5);
-//        attribute.size = randomSize;
-//        self.minimumInteritemSpacing = CGFLOAT_MAX;
-        
+        CGSize randomSize = CGSizeMake(100, randomY*0.5);
+        attribute.size = randomSize;
+
         attribute.center = randomCenter;
         
         [newAttrs addObject:attribute];
